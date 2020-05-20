@@ -8,4 +8,4 @@ def sale():
     quantity = int(input("商品數量："))
 
     if(material.sale_Product(name,price,quantity)):
-        money.spend_money(price*quantity)
+        money.earn_money(price*quantity)
