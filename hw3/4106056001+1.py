@@ -30,6 +30,7 @@ class ShoppingCar():
         return dis
 
     def getCost(self):
+        # print([i.get_price() for i in self.car])
         return sum([i.get_price() for i in self.car])
 
     def removeProduct(self, name, price,quantity):
@@ -51,6 +52,7 @@ class item():
 
     def __str__(self):
         return self.name
+        # return str([self.name,self.price,self.quantity])
 
     def __repr__(self):
         return str(self)
@@ -63,7 +65,7 @@ class item():
 
     def get_price(self):
         if self.discount():
-            return self.quantity*self.price - (self.quantity/2)*(self.price*0.2)
+            return self.quantity*self.price - int(self.quantity/2)*int(self.price*0.2)
         else:
             return self.price
 
@@ -76,9 +78,6 @@ obj1.removeProduct("草莓果醬", 70,2)
 obj1.addProduct("馬卡龍", 30, 2)
 obj1.removeProduct("咖啡豆", 120,2)
 obj1.addProduct("馬卡龍", 40, 2)
-obj1.addProduct("咖啡豆", 10, 3)
-
-
 
 print(obj1.getOwner(), "的購物車裡面有", obj1.getProduct(), "總共",
       obj1.getCost(), "元 其中", obj1.getDiscount(), "享有第二件打八折的優惠")
