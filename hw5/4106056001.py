@@ -7,9 +7,7 @@ from PyQt5.QtWidgets import QWidget, QLabel, QApplication, QMainWindow,QMessageB
 from PyQt5.QtCore import QThread, Qt, pyqtSignal, pyqtSlot
 from PyQt5.QtGui import QImage, QPixmap
 
-
 price = 0
-
 
 class MyWindow(QMainWindow, Ui_MainWindow):
     path = os.path.abspath(os.path.dirname(__file__)) + '\img\\'
